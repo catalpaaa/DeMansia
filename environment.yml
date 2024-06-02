@@ -1,0 +1,23 @@
+name: demansia
+channels:
+  - nvidia
+  - pytorch
+dependencies:
+  - cuda-python=11.*
+  - cmake
+  - einops
+  - gcc=11.*
+  - gxx=11.*
+  - ipykernel
+  - ipywidgets
+  - lightning
+  - make
+  - matplotlib
+  - python=3.11.*
+  - pytorch
+  - pytorch-cuda=11.*
+  - timm
+  - torchaudio
+  - torchvision
+  - transformers
+  - wandb
