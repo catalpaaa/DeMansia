@@ -23,7 +23,7 @@ Currently, only DeMansia Tiny is available. We will release more models as oppor
 
 | Name          | Model Dim. | Num. of Layers | Num. of Param. | Input Res. | Top-1  | Top-5  | Batch Size | Download              | Training Log    |
 |---------------|------------|----------------|----------------|------------|--------|--------|------------|-----------------------|-----------------|
-| DeMansia Tiny | 192        | 24             | 8.06M          | 224²       | 79.32% | 94.52% | 768        | [link][tiny download] | [log][tiny log] |
+| DeMansia Tiny | 192        | 24             | 8.06M          | 224²       | 79.37% | 94.51% | 768        | [link][tiny download] | [log][tiny log] |
 
 [tiny download]: https://archive.org/details/DeMansia-Tiny
 [tiny log]: https://wandb.ai/catalpa/DeMansia%20Tiny/runs/mec0ihkp

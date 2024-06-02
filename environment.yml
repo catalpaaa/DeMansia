@@ -3,19 +3,20 @@ channels:
   - nvidia
   - pytorch
 dependencies:
-  - cuda-python=11.*
+  - cccl
+  - cuda-toolkit=12.*
   - cmake
   - einops
-  - gcc=11.*
-  - gxx=11.*
+  - gcc=12.*
+  - gxx=12.*
   - ipykernel
   - ipywidgets
   - lightning
   - make
   - matplotlib
-  - python=3.11.*
+  - python=3.12.*
   - pytorch
-  - pytorch-cuda=11.*
+  - pytorch-cuda=12.1
   - timm
   - torchaudio
   - torchvision

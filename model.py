@@ -600,7 +600,7 @@ class DeMansia(pl.LightningModule):
         else:
             loss = self.ce_loss(preds, target)
 
-        self.log("Training Loss", loss, on_step=False, on_epoch=True)
+        self.log("Training Loss", loss, on_step=False, on_epoch=True, sync_dist=True)
 
         self.training = False
         return loss
@@ -616,18 +616,23 @@ class DeMansia(pl.LightningModule):
             self.valid_acc_top_1(preds, target),
             on_step=False,
             on_epoch=True,
+            sync_dist=True,
         )
         self.log(
             "Validation Accuracy Top 5",
             self.valid_acc_top_5(preds, target),
             on_step=False,
             on_epoch=True,
+            sync_dist=True,
         )
-        self.log("Validation Loss", loss, on_step=False, on_epoch=True)
+        self.log("Validation Loss", loss, on_step=False, on_epoch=True, sync_dist=True)
         return loss
 
+    def on_train_epoch_end(self):
+        pl.utilities.memory.garbage_collection_cuda()
+
     def on_validation_epoch_end(self):
-        torch.cuda.empty_cache()
+        pl.utilities.memory.garbage_collection_cuda()
 
     def configure_optimizers(self):
         optimizer = torch.optim.RAdam(
