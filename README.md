@@ -17,7 +17,7 @@ Then, simply run `source ./setup.sh` to get started.
 
 ## Pretrained Models
 
-These models were trained on the [ImageNet-1k dataset](https://www.image-net.org/challenges/LSVRC/2012/2012-downloads.php) using a single RTX A6000 during our experiments.
+These models were trained on the [ImageNet-1k dataset](https://www.image-net.org/challenges/LSVRC/2012/2012-downloads.php) using a single RTX 6000 Ada during our experiments.
 
 Currently, only DeMansia Tiny is available. We will release more models as opportunities arise.
 
